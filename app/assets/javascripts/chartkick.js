@@ -713,7 +713,7 @@
  *         ['Edinburgh',70],
  *         ['Liverpool',30]
  *         
-*/          
+*/          	alert (chart.data );
           		var data = new google.visualization.DataTable();
                 data.addColumn("string", "");
                 data.addColumn("number", "Value");
