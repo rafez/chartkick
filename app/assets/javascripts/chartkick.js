@@ -695,12 +695,27 @@
           };
           var options = merge(merge(defaultOptions, chartOptions), chart.options.library || {});
 
-          var data = new google.visualization.DataTable();
-          data.addColumn("string", "");
-          data.addColumn("number", "Value");
-          data.addRows(chart.data);
-
-          chart.chart = new google.visualization.GeoChart(chart.element);
+/*          Remmed out all of these lines for and using the default arryaToDataTable, which
+ * 			gives us the following benefits
+ * 			- can use all types of Geo Charts
+ * 			- can use Markers on Cities
+ * 			- can use Multiple Column Values, e.g. Population and Area
+ * 
+ *         var data = new google.visualization.DataTable();
+ *         data.addColumn("string", "");
+ *         data.addColumn("number", "Value");
+ *         data.addRows(chart.data);
+ *         
+ *         To use this instead pass across the titles and values in the first elements of the data
+ *         array being passed e.g.
+ *         ['City','Population'],
+ *         ['London',120],
+ *         ['Edinburgh',70],
+ *         ['Liverpool',30]
+ *         
+*/          
+          var data = new google.visualization.arrayToDataTable( chart.data );
+          chart.chart = new google.visualization.GeoChart( chart.element );
           resize(function () {
             chart.chart.draw(data, options);
           });
