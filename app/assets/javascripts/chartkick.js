@@ -714,7 +714,10 @@
  *         ['Liverpool',30]
  *         
 */          
-          var data = new google.visualization.arrayToDataTable( chart.data );
+                   data.addColumn("string", "");
+                   data.addColumn("number", "Value");
+                   data.addRows(chart.data);
+//          var data = new google.visualization.arrayToDataTable( chart.data );
           chart.chart = new google.visualization.GeoChart( chart.element );
           resize(function () {
             chart.chart.draw(data, options);
