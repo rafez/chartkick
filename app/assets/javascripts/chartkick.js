@@ -689,7 +689,7 @@
       this.renderGeoChart = function (chart) {
         waitForLoaded(function () {
           var chartOptions = {
-            legend: "none",
+//            legend: "none",
             colorAxis: {
               colors: chart.options.colors || ["#f6c7b6", "#ce502d"]
             }
@@ -746,7 +746,7 @@
       this.renderTimeline = function (chart) {
         waitForLoaded("timeline", function () {
           var chartOptions = {
-            legend: "none"
+//            legend: "none"
           };
 
           if (chart.options.colors) {
