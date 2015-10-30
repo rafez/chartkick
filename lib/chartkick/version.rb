@@ -1,3 +1,3 @@
 module Chartkick
-  VERSION = "1.4.2-RNOO-004"
+  VERSION = "1.4.2-004"
 end
