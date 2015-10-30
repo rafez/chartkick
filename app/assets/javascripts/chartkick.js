@@ -722,7 +722,7 @@
 //                data.addRows(chart.data);
 //      		var data = new google.visualization.DataTable();
           var data = new google.visualization.arrayToDataTable( chart.data );
-          data.addRows(chart.data);
+//          data.addRows(chart.data);
           chart.chart = new google.visualization.GeoChart( chart.element );
           resize(function () {
             chart.chart.draw(data, options);
