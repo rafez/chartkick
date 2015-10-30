@@ -2,7 +2,8 @@
  * Chartkick.js
  * Create beautiful Javascript charts with minimal code
  * https://github.com/ankane/chartkick.js
- * v1.4.2
+ * v1.4.2 - RNOO - 004
+ * 
  * MIT License
  */
 
@@ -715,8 +716,8 @@
  *         
 */          	alert (chart.data );
           		var data = new google.visualization.DataTable();
-                data.addColumn("string", "");
-                data.addColumn("number", "Value");
+//                data.addColumn("string", "");
+//                data.addColumn("number", "Value");
                 data.addRows(chart.data);
 //          var data = new google.visualization.arrayToDataTable( chart.data );
           chart.chart = new google.visualization.GeoChart( chart.element );
