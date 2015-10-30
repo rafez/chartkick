@@ -715,11 +715,12 @@
  *         ['Liverpool',30]
  *         
 */          	alert (chart.data );
-          		var data = new google.visualization.DataTable();
+//          		var data = new google.visualization.DataTable();
 //                data.addColumn("string", "");
 //                data.addColumn("number", "Value");
                 data.addRows(chart.data);
-//          var data = new google.visualization.arrayToDataTable( chart.data );
+          var data = new google.visualization.arrayToDataTable( chart.data );
+          data.addRows(chart.data);
           chart.chart = new google.visualization.GeoChart( chart.element );
           resize(function () {
             chart.chart.draw(data, options);
