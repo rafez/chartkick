@@ -689,7 +689,7 @@
       this.renderGeoChart = function (chart) {
         waitForLoaded(function () {
           var chartOptions = {
-            legend: "none",
+//            legend: "none",
             colorAxis: {
               colors: chart.options.colors || ["#f6c7b6", "#ce502d"]
             }
@@ -719,7 +719,7 @@
 //          		var data = new google.visualization.DataTable();
 //                data.addColumn("string", "");
 //                data.addColumn("number", "Value");
-                data.addRows(chart.data);
+//                data.addRows(chart.data);
       		var data = new google.visualization.DataTable();
 //          var data = new google.visualization.arrayToDataTable( chart.data );
           data.addRows(chart.data);
@@ -879,7 +879,8 @@
   }
 
   function processGeoData(chart) {
-    chart.data = processSimple(chart.data);
+//    chart.data = processSimple(chart.data);
+//    chart.data = processSimple(chart.data);
     renderChart("GeoChart", chart);
   }
 
